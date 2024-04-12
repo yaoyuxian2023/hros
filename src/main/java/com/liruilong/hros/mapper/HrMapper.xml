@@ -12,7 +12,7 @@
         <result column="password" property="password" jdbcType="VARCHAR"/>
         <result column="userface" property="userface" jdbcType="VARCHAR"/>
         <result column="remark" property="remark" jdbcType="VARCHAR"/>
-        <result column="employee_id" property="employeeId" jdbcType="VARCHAR"/>
+        <result column="employee_id" property="employeeId" jdbcType="INTEGER"/>
         <result column="work_date" property="workDate" jdbcType="VARCHAR"/>
 
         <collection property="roles" ofType="com.liruilong.hros.model.Role">
