@@ -36,8 +36,10 @@ public class HrController {
     @GetMapping("/base")
     public List<Hr> getBaseHr() {
         Hr baseHr = hrService.getBaseHr();
-        List<String> collect = Arrays.stream(baseHr.getWorkDate().split(",")).collect(Collectors.toList());
-        baseHr.setWorkDates(collect);
+        if(baseHr.getWorkDate() != null){
+            List<String> collect = Arrays.stream(baseHr.getWorkDate().split(",")).collect(Collectors.toList());
+            baseHr.setWorkDates(collect);
+        }
         return Collections.singletonList(baseHr);
 
     }
